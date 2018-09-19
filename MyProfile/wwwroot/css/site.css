@@ -35,3 +35,50 @@ body {
         display: none;
     }
 }
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Set padding to display errors that occur during databinding */
+.padding-error {
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nofloat {
+        float: none;
+        padding: 10px 15px;
+    }
+}
+
+
+.navbar-nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+    .navbar-nav-center > li {
+        float: none;
+        display: inline-block;
+    }
+
+    .navbar-nav-center > li.activate{
+        color : white;
+        font-size:xx-large;
+    }
+
+        .navbar-nav-center > li.activate > a {
+            color: white;
+        }

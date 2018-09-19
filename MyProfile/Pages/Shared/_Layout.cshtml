@@ -15,36 +15,49 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/css/fluidbox.min.css" />
+    <link href="~/css/Style.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+    
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+
+    <nav id="profile_navbar" class="navbar navbar-inverse navbar-fixed-top" style="background: rgba(0, 0, 0, 0.8)">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-page="/Index" class="navbar-brand">MyProfile</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
+                <ul>
+                    <li>
+                        <a class="navbar-brand" href="#" title="Nishanth Antony Satler">
+                            <div class="brand-logo" style="width: 50px;height: inherit;margin-top: -13px;overflow: hidden;border-radius: 20px;"><img src="~/images/me.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="navbar-brand">Nishanth Antony Satler</a>
+                    </li>
                 </ul>
             </div>
+            <ul class="nav navbar-nav navbar-nav-center">
+                <li id="project" class="runner"><a href="#project_section">Project Work</a></li>
+                <li id="about" class="runner"><a href="#about_section">About Me</a></li>
+                <li id="experience" class="runner"><a href="#experience_section">Experience</a></li>
+                <li id="education" class="runner"><a href="#education_section">Education</a></li>
+                <li id="certification" class="runner"><a href="#certification_section">Certification</a></li>
+                <li id="award" class="runner"><a href="#award_section">Recognition</a></li>
+            </ul>
+            <ul class="nav navbar-right">
+                <li> <a class="btn-primary navbar-btn" target="_blank" href="~/Resume/Nishanth_Antony.pdf" style="border-radius:50px">Download Resume</a></li>
+            </ul>
         </div>
     </nav>
-
-    <partial name="_CookieConsentPartial" />
 
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - MyProfile</p>
+            <p>&copy; @DateTime.Now.Year</p>
         </footer>
     </div>
 
@@ -68,7 +81,11 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/js/jquery.fluidbox.min.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

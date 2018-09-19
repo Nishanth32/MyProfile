@@ -7,11 +7,20 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MyProfile.Pages
 {
-    public class IndexModel : PageModel
+
+
+    public class MyResumeController : Controller
     {
-        public IActionResult OnGet()
+        public IActionResult Index()
         {
-            var trytoRedirect = "~/MyResume";            return RedirectPermanent(trytoRedirect);
+            return View();
+        }
+    }
+
+    public class MyResumeModel : PageModel
+    {
+        public void OnGet()
+        {
         }
     }
 }
